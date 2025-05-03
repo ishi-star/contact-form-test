@@ -1,0 +1,41 @@
+.header {
+  background: #fcfbfb;
+  border-bottom:#b43636
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+
+}
+
+.header__logo {
+  color: rgba(200, 93, 93, 0.69);
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+.underline {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-weight: lighter;
+  font-family: Helvetica, "游ゴシック", sans-serif;
+}
+  
+/* 下線をひきたい */
+.underline::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    /* 下線を文字の下に配置する距離を調整 */
+    height: 3px;
+      /* 下線の太さ */
+    background-color: #e48080;
+      /* 下線の色 */
+
+}
