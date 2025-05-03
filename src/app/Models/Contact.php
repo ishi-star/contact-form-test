@@ -21,7 +21,6 @@ class Contact extends Model
     'detail',
     'created_at',
     'updated_at',
-    'inquiry_type',
     'content',
     ];
 }

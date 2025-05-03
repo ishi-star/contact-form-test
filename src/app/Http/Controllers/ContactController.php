@@ -19,12 +19,17 @@ class ContactController extends Controller
   public function confirm(ContactRequest $request)
   {
     $contact = $request->only([
-      'name', 
+      'last_name',
+      'first_name',
       'gender', 
-      'email', 
+      'email',
+      'phone_area_code', 
+      'phone_number_1', 
+      'phone_number_2', 
       'tel', 
-      'address', 
-      'inquiry_type', 
+      'address',
+      'building',
+      'detail', 
       'content',
     ]);
     // return view('confirm', ['contact' => $contact]);
@@ -34,13 +39,18 @@ class ContactController extends Controller
   // public function store(Request $request)
   public function store(ContactRequest $request)
   {
+
+    $tel = $request->phone_area_code . $request->phone_number_1 . $request->phone_number_2;
+    
     $contact = $request->only([
-      'name',
+      'last_name',
+      'first_name',
       'gender', 
       'email', 
-      'tel', 
+      // 'tel', 
       'address',
-      'inquiry_type',
+      'building',
+      'detail',
       'content',
     ]);
 

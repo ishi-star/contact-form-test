@@ -23,8 +23,9 @@ h2 {
 
 .form__group {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 15px;
+  align-items: center;
 }
 
 .form__label--required {
@@ -111,6 +112,10 @@ h2 {
     justify-content: center;
 }
 
+
+.form__group-content--name .form__input--text input {
+  width: 290px;
+}
 /* .form__group-content--name .form__input--text {
   width: 150%;
 }

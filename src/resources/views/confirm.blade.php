@@ -38,7 +38,10 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">電話番号</th>
           <td class="confirm-table__text">
-            <input type="tel" name="tel" value="{{ $contact['tel'] }}" readonly />
+    {{ $contact['phone_area_code'] }} - {{ $contact['phone_number_1'] }} - {{ $contact['phone_number_2'] }}
+    <input type="hidden" name="phone_area_code" value="{{ $contact['phone_area_code'] }}">
+    <input type="hidden" name="phone_number_1" value="{{ $contact['phone_number_1'] }}">
+    <input type="hidden" name="phone_number_2" value="{{ $contact['phone_number_2'] }}">
           </td>
         </tr>
 
@@ -59,7 +62,7 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">お問い合わせの種類</th>
           <td class="confirm-table__text">
-            <input type="text" name="inquiry_type" value="{{ $contact['inquiry_type'] }}" readonly />
+            <input type="text" name="detail" value="{{ $contact['detail'] }}" readonly />
           </td>
         </tr>
 
